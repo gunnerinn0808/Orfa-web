@@ -1,26 +1,181 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-forest-950: #0d1f16;
+  --color-forest-900: #123822;
+  --color-forest-800: #17492c;
+  --color-forest-700: #1e5c37;
+  --color-forest-600: #277245;
+  --color-forest-500: #338a54;
+
+  --color-lawn-600: #4c9a4a;
+  --color-lawn-500: #64ad5c;
+  --color-lawn-400: #86c478;
+  --color-lawn-300: #aed99e;
+  --color-lawn-200: #d3ead0;
+  --color-lawn-100: #e9f4e4;
+  --color-lawn-50: #f2f8ef;
+
+  --color-cream-100: #f2efe4;
+  --color-cream-50: #f9f7ef;
+  --color-cream-0: #fffdf8;
+
+  --color-ink-900: #1c2117;
+  --color-ink-700: #333a2d;
+  --color-ink-600: #4b5442;
+  --color-ink-500: #6b7460;
+  --color-ink-400: #8b9380;
+
+  --color-mist-700: #405a63;
+  --color-mist-600: #52717c;
+  --color-mist-500: #6f8e97;
+  --color-mist-200: #d7e3e6;
+  --color-mist-100: #e9f0f1;
+
+  --color-clay-500: #b5693f;
+
+  --background: var(--color-cream-50);
+  --foreground: var(--color-ink-900);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-forest-950: var(--color-forest-950);
+  --color-forest-900: var(--color-forest-900);
+  --color-forest-800: var(--color-forest-800);
+  --color-forest-700: var(--color-forest-700);
+  --color-forest-600: var(--color-forest-600);
+  --color-forest-500: var(--color-forest-500);
+
+  --color-lawn-600: var(--color-lawn-600);
+  --color-lawn-500: var(--color-lawn-500);
+  --color-lawn-400: var(--color-lawn-400);
+  --color-lawn-300: var(--color-lawn-300);
+  --color-lawn-200: var(--color-lawn-200);
+  --color-lawn-100: var(--color-lawn-100);
+  --color-lawn-50: var(--color-lawn-50);
+
+  --color-cream-100: var(--color-cream-100);
+  --color-cream-50: var(--color-cream-50);
+  --color-cream-0: var(--color-cream-0);
+
+  --color-ink-900: var(--color-ink-900);
+  --color-ink-700: var(--color-ink-700);
+  --color-ink-600: var(--color-ink-600);
+  --color-ink-500: var(--color-ink-500);
+  --color-ink-400: var(--color-ink-400);
+
+  --color-mist-700: var(--color-mist-700);
+  --color-mist-600: var(--color-mist-600);
+  --color-mist-500: var(--color-mist-500);
+  --color-mist-200: var(--color-mist-200);
+  --color-mist-100: var(--color-mist-100);
+
+  --color-clay-500: var(--color-clay-500);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+
+  --shadow-soft: 0 1px 2px rgba(28, 33, 23, 0.04), 0 12px 32px -12px rgba(18, 56, 34, 0.18);
+  --shadow-lift: 0 1px 2px rgba(28, 33, 23, 0.06), 0 24px 48px -16px rgba(18, 56, 34, 0.28);
+
+  --animate-drift: drift 7s ease-in-out infinite;
+  --animate-bob: bob 5s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-cream-50);
+    --foreground: var(--color-ink-900);
   }
+}
+
+* {
+  border-color: rgb(28 33 23 / 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(14px); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+::view-transition-old(.page-fade-out) {
+  animation: 120ms ease-out both page-fade-out;
+}
+
+::view-transition-new(.page-fade-in) {
+  animation: 220ms ease-in 60ms both page-fade-in;
+}
+
+@keyframes page-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(rgb(18 56 34 / 0.16) 1.3px, transparent 1.3px);
+  background-size: 22px 22px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+  }
 }
