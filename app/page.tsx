@@ -1,5 +1,4 @@
 import { Hero } from "@/components/sections/Hero";
-import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { RentalOptions } from "@/components/sections/RentalOptions";
 import { PhotoBanner } from "@/components/sections/PhotoBanner";
 import { GrassMowingTeaser } from "@/components/sections/GrassMowingTeaser";
@@ -12,13 +11,6 @@ export default function Home() {
     <>
       <Hero />
       <RentalOptions />
-      <BeforeAfter
-        padding="tight"
-        faqLink={{
-          label: "Skoða algengar spurningar um útleigu á slátturróbotum",
-          href: "/slatturobot#faq",
-        }}
-      />
       <PhotoBanner />
       <GrassMowingTeaser />
       <AboutTeaser />
