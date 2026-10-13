@@ -97,10 +97,6 @@
   border-color: rgb(28 33 23 / 0.08);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
