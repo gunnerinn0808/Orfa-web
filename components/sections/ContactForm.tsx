@@ -2,10 +2,8 @@
 
 import { useState, type ChangeEvent, type FormEvent, type ReactNode } from "react";
 import { CircleCheck, LoaderCircle, TriangleAlert } from "lucide-react";
-import { contactInterests } from "@/lib/content";
 import { site } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
-import { cn } from "@/lib/cn";
 
 const inputClasses =
   "w-full rounded-xl border border-ink-900/12 bg-cream-50 px-4 py-2.5 text-sm text-ink-900 placeholder:text-ink-400 transition-colors focus:border-forest-600 focus:outline-none focus:ring-2 focus:ring-forest-600/20";
@@ -62,13 +60,6 @@ function Field({
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const [interests, setInterests] = useState<string[]>([]);
-
-  function toggleInterest(value: string) {
-    setInterests((prev) =>
-      prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
-    );
-  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -113,7 +104,6 @@ export function ContactForm() {
 
       setStatus("success");
       form.reset();
-      setInterests([]);
     } catch {
       setStatus("error");
     }
@@ -217,38 +207,6 @@ export function ContactForm() {
           </select>
         </Field>
       </div>
-
-      <fieldset className="mt-5">
-        <legend className="mb-2.5 text-sm font-medium text-ink-900">
-          Hef áhuga á <span className="font-normal text-ink-400">(valfrjálst)</span>
-        </legend>
-        <div className="flex flex-wrap gap-3">
-          {contactInterests.map((interest) => {
-            const checked = interests.includes(interest);
-            return (
-              <label
-                key={interest}
-                className={cn(
-                  "flex cursor-pointer items-center gap-2 rounded-full border px-4 py-2 text-sm transition-colors",
-                  checked
-                    ? "border-forest-700 bg-forest-700/10 text-forest-800"
-                    : "border-ink-900/15 text-ink-600 hover:border-forest-700/40"
-                )}
-              >
-                <input
-                  type="checkbox"
-                  name="ahugi"
-                  value={interest}
-                  checked={checked}
-                  onChange={() => toggleInterest(interest)}
-                  className="sr-only"
-                />
-                {interest}
-              </label>
-            );
-          })}
-        </div>
-      </fieldset>
 
       <Field
         label={
