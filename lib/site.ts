@@ -13,7 +13,7 @@ export const site = {
   // Contact details.
   phone: "842 2828",
   phoneHref: "tel:+3548422828",
-  email: "gunnsigardslattur@gmail.com",
+  email: "orfa@orfa.is",
   location: "Akureyri",
   facebookName: "Orfa",
 
