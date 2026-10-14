@@ -24,7 +24,7 @@ export function Hero() {
               {hero.primaryCta.label}
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Button>
-            <Button href={hero.secondaryCta.href} variant="outline" size="lg">
+            <Button href={hero.secondaryCta.href} variant="secondary" size="lg">
               {hero.secondaryCta.label}
             </Button>
           </div>

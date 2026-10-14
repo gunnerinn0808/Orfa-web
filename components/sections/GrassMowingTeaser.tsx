@@ -14,7 +14,7 @@ export function GrassMowingTeaser() {
             title="Leyfðu okkur að sjá um sláttinn"
             body="Sláttur á um það bil tveggja vikna fresti yfir sumarið, með snyrtilegri umgjörð eftir hvert skipti. Sveigjanlegt fyrirkomulag sem lagar sig að þörfum garðsins þíns."
           />
-          <Button href={grassMowing.cta.href} variant="outline" className="mt-7">
+          <Button href={grassMowing.cta.href} className="mt-7">
             {grassMowing.cta.label}
           </Button>
         </div>

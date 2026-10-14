@@ -25,7 +25,7 @@ export function BeforeAfter({ faqLink, padding = "default" }: BeforeAfterProps) 
             />
           </div>
           {faqLink && (
-            <Button href={faqLink.href} variant="secondary" className="mt-5">
+            <Button href={faqLink.href} className="mt-5">
               {faqLink.label}
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Button>
