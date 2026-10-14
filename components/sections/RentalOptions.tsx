@@ -17,7 +17,7 @@ export function RentalOptions() {
             Fá tilboð
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Button>
-          <Button href="/slatturobot#faq" variant="secondary">
+          <Button href="/slatturobot#faq">
             Sjá algengar spurningar um útleigu slátturróbota
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Button>

@@ -10,9 +10,9 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-forest-700 text-cream-0 shadow-soft hover:bg-forest-800 hover:shadow-lift active:bg-forest-900",
+    "bg-gradient-to-b from-forest-600 to-forest-800 text-cream-0 shadow-soft hover:from-forest-500 hover:to-forest-700 hover:shadow-lift hover:-translate-y-0.5 active:translate-y-0 active:from-forest-700 active:to-forest-900",
   secondary:
-    "bg-lawn-500 text-forest-950 shadow-soft hover:bg-lawn-400 active:bg-lawn-600",
+    "bg-gradient-to-b from-lawn-400 to-lawn-600 text-forest-950 shadow-soft hover:from-lawn-300 hover:to-lawn-500 hover:shadow-lift hover:-translate-y-0.5 active:translate-y-0 active:from-lawn-500 active:to-lawn-600",
   outline:
     "border border-ink-900/15 bg-transparent text-ink-900 hover:border-forest-700 hover:text-forest-800 hover:bg-forest-700/5",
   "outline-inverse":
