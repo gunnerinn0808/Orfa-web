@@ -39,7 +39,7 @@ export default function UmOkkurPage() {
             src="/images/gunnar-portrait.jpg"
             alt="Gunnar Þór Sigurðarson"
             width={1560}
-            height={878}
+            height={781}
             className="h-full w-full object-cover"
           />
         </div>
