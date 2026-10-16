@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { about } from "@/lib/content";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Button } from "@/components/ui/Button";
@@ -19,7 +20,7 @@ export default function UmOkkurPage() {
         eyebrow="Um okkur"
         title={about.heading}
       >
-        <div className="w-full max-w-xl space-y-4 rounded-2xl border border-cream-0/15 bg-cream-0/5 p-5 text-base leading-relaxed text-cream-100/80">
+        <div className="w-full space-y-4 rounded-2xl border border-cream-0/15 bg-cream-0/5 p-5 text-base leading-relaxed text-cream-100/80">
           <p>
             Ég heiti Gunnar og byrjaði að starfa við garðslátt undir nafninu Gunnsi garðsláttur árið 2022, þegar ég var í 8. bekk. Það sem byrjaði sem lítið verkefni hefur þróast í starfsemi sem ég hef byggt upp ár frá ári, með áherslu á góða þjónustu, vönduð vinnubrögð og ánægða viðskiptavini.
           </p>
@@ -32,6 +33,15 @@ export default function UmOkkurPage() {
           <p>
             Markmiðið er að sameina reynsluna sem ég hef öðlast í garðþjónustu og nýja tækni til að bjóða upp á einfaldari og þægilegri leið til að hugsa um garðinn.
           </p>
+        </div>
+        <div className="w-full overflow-hidden rounded-2xl border border-cream-0/10 shadow-lift">
+          <Image
+            src="/images/gunnar-portrait.jpg"
+            alt="Gunnar Þór Sigurðarson"
+            width={1560}
+            height={878}
+            className="h-full w-full object-cover"
+          />
         </div>
         <Button href="/hafa-samband" size="lg">
           Hafa samband
