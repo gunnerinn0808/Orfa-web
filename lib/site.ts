@@ -4,8 +4,8 @@ export const site = {
   description:
     "Orfa leigir út slátturóbota og býður upp á grasslátt, einfaldar og þægilegar lausnir svo þú getir sleppt við sláttinn.",
 
-  // Placeholder domain — replace with the real production domain before launch (used by sitemap.ts/robots.ts).
-  url: "https://www.example.com",
+  // Production domain (used by sitemap.ts/robots.ts and metadataBase).
+  url: "https://orfa.is",
 
   // Formspree form ID — endpoint is https://formspree.io/f/{formspreeFormId}. Not a secret.
   formspreeFormId: "xvkgdegn",
