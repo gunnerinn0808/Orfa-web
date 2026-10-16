@@ -36,7 +36,7 @@ export default function UmOkkurPage() {
         </div>
         <div className="w-full overflow-hidden rounded-2xl border border-cream-0/10 shadow-lift">
           <Image
-            src="/images/gunnar-portrait.jpg"
+            src="/images/gunnar-portrait-v2.jpg"
             alt="Gunnar Þór Sigurðarson"
             width={1560}
             height={781}
