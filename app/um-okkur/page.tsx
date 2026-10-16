@@ -18,12 +18,6 @@ export default function UmOkkurPage() {
       <PageHeader
         eyebrow="Um okkur"
         title={about.heading}
-        image={{
-          src: "/images/gunnar-slattutraktor.jpg",
-          alt: "Gunnar á sláttutraktor við störf á Akureyri",
-          width: 1179,
-          height: 1782,
-        }}
       >
         <div className="w-full max-w-xl space-y-4 rounded-2xl border border-cream-0/15 bg-cream-0/5 p-5 text-base leading-relaxed text-cream-100/80">
           <p>
